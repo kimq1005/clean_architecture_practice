@@ -15,5 +15,6 @@ import androidx.compose.ui.text.style.TextAlign
 fun YeahManScreen(text:String){
     Column(modifier = Modifier.fillMaxWidth().background(Color.Blue)) {
         Text(text = text, textAlign = TextAlign.Center)
+
     }
 }
