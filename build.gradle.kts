@@ -15,5 +15,6 @@ buildscript {
         classpath(libs.hilt.gradle.plugin)
 //        classpath(libs.kotlinx.serialization.plugin)
         classpath(libs.ksp.plugin)
+
     }
 }
