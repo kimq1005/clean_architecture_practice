@@ -1,21 +1,49 @@
 [versions]
-corektx = "1.5.0"
-appcompat = "1.5.1"
-matrial = "1.6.1"
-junit = "4.13.2"
-testspresso = "3.4.0"
-coroutine = "1.6.4"
-room = "2.4.3"
+activity = "1.8.2"
 hilt = "2.44"
-paging = "3.1.1"
+compose = "1.5.4"
+compose-compiler = "1.5.3" # It's used! Use compatible with Kotlin one
+compose-material3 = "1.1.2"
 
-
-#implementation("com.google.dagger:hilt-android:2.44")
-#kapt("com.google.dagger:hilt-android-compiler:2.44")
 
 [libraries]
 hilt-android = {module = "com.google.dagger:hilt-android", version.ref="hilt"}
 hilt-compiler = {module = "com.google.dagger:hilt-android-compiler" , version.ref = "hilt"}
+hilt-gradle-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hilt" }
+ksp-plugin = { module = "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin", version = "1.9.10-1.0.13" }
+
+
+# Compose
+compose-animation = { module = "androidx.compose.animation:animation", version.ref = "compose" }
+compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
+compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
+compose-material3-windowsize = { module = "androidx.compose.material3:material3-window-size-class", version.ref = "compose-material3" }
+compose-runtime = { module = "androidx.compose.runtime:runtime", version.ref = "compose" }
+compose-runtime-livedate-temp = { module = "androidx.compose.runtime:runtime-livedata", version.ref = "compose" }
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose" }
+compose-activity = { module = "androidx.activity:activity-compose", version = "1.8.2" }
+compose-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version = "2.6.2" }
+compose-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "compose" }
+compose-coil = { module = "io.coil-kt:coil-compose", version = "2.4.0" }
+
 
 [bundles]
 hilt = ["hilt-android"]
+
+
+
+
+compose = [
+    "compose-animation",
+    "compose-foundation",
+    "compose-material3",
+    "compose-material3-windowsize",
+    "compose-runtime",
+    "compose-ui",
+    "compose-activity",
+    "compose-viewmodel",
+    "compose-tooling",
+    "compose-runtime-livedate-temp",
+    "compose-coil",
+]
+
